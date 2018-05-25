@@ -11,8 +11,11 @@ namespace TaskPlanApp
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new TaskPage();
+            var main = new NavigationPage();
+            main.BarBackgroundColor = Color.LightBlue;
+            var simpleTaskPage = new TaskPage();
+            main.PushAsync(simpleTaskPage);
+			MainPage = main;
 		}
 
 		protected override void OnStart ()
