@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>iPhone 8 iOS 11.3</SelectedDevice>
     <DefaultDevice>iPhone 8 iOS 11.3</DefaultDevice>
+    <DeveloperId>kyle.everson%40jafenhar.com</DeveloperId>
+    <DevelopmentTeamId>G3ZWB3HB5X</DevelopmentTeamId>
   </PropertyGroup>
 </Project>

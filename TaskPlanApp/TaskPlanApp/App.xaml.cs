@@ -1,4 +1,5 @@
 using System;
+using TaskPlanApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace TaskPlanApp
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new TaskPage();
 		}
 
 		protected override void OnStart ()
