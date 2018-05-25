@@ -3,10 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TaskPlanApp.Converters"
              x:Class="TaskPlanApp.Views.TaskPage">
-    <Page.Resources>
-        <local:DateTimeToDateTimeOffsetConverter x:Key="DateTimeToDateTimeOffsetConverter"/>
-    </Page.Resources>
-
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.iOS>20,20,20,0</OnPlatform.iOS>
