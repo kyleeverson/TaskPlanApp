@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\DateTimeConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Task.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\TaskPage.xaml.cs">

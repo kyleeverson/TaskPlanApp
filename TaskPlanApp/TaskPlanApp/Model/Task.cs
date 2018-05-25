@@ -7,7 +7,7 @@ namespace TaskPlanApp.Model
     class Task
     {
         public string itemName;
-        public string startDate;
+        public DateTime startDate;
         public Boolean completed;
     }
 }

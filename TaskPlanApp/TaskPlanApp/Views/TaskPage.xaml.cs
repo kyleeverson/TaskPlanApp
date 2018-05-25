@@ -18,6 +18,7 @@ namespace TaskPlanApp.Views
             viewModel = new TaskViewModel();
 			InitializeComponent ();
             BindingContext = viewModel;
-		}
-	}
+            viewModel.RaisePropertyChanged("StartDate");
+        }
+    }
 }

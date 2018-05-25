@@ -21,7 +21,7 @@ namespace TaskPlanApp.ViewModels
             }
         }
 
-        public string StartDate {
+        public DateTime StartDate {
             get {
                 return _task.startDate;
             }
@@ -45,8 +45,8 @@ namespace TaskPlanApp.ViewModels
         {
             _task = new Task {
                 itemName = "This is the first item",
-                completed = false,
-                startDate = "2018 May 24"
+                completed = true,
+                startDate = DateTime.Parse("08/25/2018 8:00AM")
             };
         }
 
