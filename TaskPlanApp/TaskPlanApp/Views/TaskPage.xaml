@@ -13,14 +13,13 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout>
-            <Entry Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding Name, Mode=TwoWay}" HorizontalOptions="FillAndExpand" />
             <DatePicker
-                Margin="10"
-                FontSize="24"
-                Date="{Binding StartDate, Mode=TwoWay}"/>
+                Date="{Binding StartDate, Mode=TwoWay}"
+                HorizontalOptions="FillAndExpand" />
             <StackLayout Orientation="Horizontal">
                 <Label Text="Is Complete" />
-                <Switch IsToggled="{Binding IsCompleted}" HorizontalOptions="StartAndExpand" />
+                <Switch IsToggled="{Binding IsCompleted, Mode=TwoWay}" HorizontalOptions="StartAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

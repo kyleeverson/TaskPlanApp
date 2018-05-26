@@ -13,9 +13,8 @@ namespace TaskPlanApp.Views
 	public partial class TaskPage : ContentPage
 	{
         TaskViewModel viewModel;
-		public TaskPage ()
+		public TaskPage (TaskViewModel viewModel)
 		{
-            viewModel = new TaskViewModel();
 			InitializeComponent ();
             BindingContext = viewModel;
             viewModel.RaisePropertyChanged("StartDate");

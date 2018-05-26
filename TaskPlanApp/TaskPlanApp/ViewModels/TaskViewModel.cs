@@ -6,9 +6,9 @@ using TaskPlanApp.Model;
 
 namespace TaskPlanApp.ViewModels
 {
-    class TaskViewModel
+    public class TaskViewModel : INotifyPropertyChanged
     {
-        private Task _task;
+        private TaskItem _task;
 
         public string Name
         {
@@ -41,23 +41,16 @@ namespace TaskPlanApp.ViewModels
             }
         }
 
-        public TaskViewModel()
+        public TaskViewModel(TaskItem t)
         {
-            _task = new Task {
-                itemName = "This is the first item",
-                completed = true,
-                startDate = DateTime.Parse("08/25/2018 8:00AM")
-            };
+            _task = t;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void RaisePropertyChanged(string propName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
     }
 }

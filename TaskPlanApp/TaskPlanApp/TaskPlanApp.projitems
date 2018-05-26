@@ -19,8 +19,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Task.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\TaskItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TaskListView.xaml.cs">
+      <DependentUpon>TaskListView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\TaskPage.xaml.cs">
       <DependentUpon>TaskPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -28,6 +33,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TaskPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TaskListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

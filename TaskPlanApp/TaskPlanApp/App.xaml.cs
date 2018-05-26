@@ -11,10 +11,10 @@ namespace TaskPlanApp
 		public App ()
 		{
 			InitializeComponent();
-            var main = new NavigationPage();
-            main.BarBackgroundColor = Color.LightBlue;
-            var simpleTaskPage = new TaskPage();
-            main.PushAsync(simpleTaskPage);
+            var main = new NavigationPage {
+                BarBackgroundColor = Color.LightBlue
+            };
+            main.PushAsync(new TaskListView());
 			MainPage = main;
 		}
 
