@@ -19,7 +19,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Model\TaskItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Task\TaskDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Task\TaskItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\ISQLiteDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\TaskListView.xaml.cs">
