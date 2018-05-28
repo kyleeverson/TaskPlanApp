@@ -28,5 +28,10 @@ namespace TaskPlanApp.Model.Task
 
             return list;
         }
+
+        public static async Task<int> UpdateItem(TaskItem item)
+        {
+            return await _me._db.SaveItem(item);
+        }
     }
 }

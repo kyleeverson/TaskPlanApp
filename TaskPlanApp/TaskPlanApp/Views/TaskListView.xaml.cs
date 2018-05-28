@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using TaskPlanApp.Model;
 using TaskPlanApp.ViewModels;
+using TaskPlanApp.Model.Task;
 
 namespace TaskPlanApp.Views
 {
@@ -22,6 +23,10 @@ namespace TaskPlanApp.Views
 
             InitializeComponent();
 
+            ToolbarItems.Add(new ToolbarItem("Add", null, async () => {
+                await AddTask();
+            }));
+
             BindingContext = model;
         }
 
@@ -35,5 +40,13 @@ namespace TaskPlanApp.Views
 
             await Navigation.PushAsync(page);
         }
+
+        async Task<int> AddTask()
+        {
+            TaskItem item = new TaskItem();
+            await TaskManager.UpdateItem(item);
+            return 0;
+        }
+
     }
 }

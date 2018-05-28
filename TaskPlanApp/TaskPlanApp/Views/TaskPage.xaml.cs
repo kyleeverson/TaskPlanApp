@@ -12,10 +12,11 @@ namespace TaskPlanApp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TaskPage : ContentPage
 	{
-        TaskViewModel viewModel;
+
 		public TaskPage (TaskViewModel viewModel)
 		{
 			InitializeComponent ();
+
             BindingContext = viewModel;
             viewModel.RaisePropertyChanged("StartDate");
         }
