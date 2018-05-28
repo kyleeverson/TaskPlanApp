@@ -45,6 +45,11 @@ namespace TaskPlanApp.Views
         {
             TaskItem item = new TaskItem();
             await TaskManager.UpdateItem(item);
+            TaskViewModel vm = new TaskViewModel(item);
+            TaskPage page = new TaskPage(vm);
+            model.AddNewItem(vm);
+
+            await Navigation.PushAsync(page);
             return 0;
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using TaskPlanApp.Model;
+using TaskPlanApp.Model.Task;
 
 namespace TaskPlanApp.ViewModels
 {
@@ -51,6 +52,9 @@ namespace TaskPlanApp.ViewModels
         public void RaisePropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
+            TaskManager.UpdateItem(_task);
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
         }
     }
 }

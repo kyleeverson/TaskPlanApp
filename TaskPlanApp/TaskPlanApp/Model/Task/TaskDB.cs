@@ -27,10 +27,10 @@ namespace TaskPlanApp.Model
         {
             if (item.id != 0) {
                 await db.UpdateAsync(item);
-                return item.id;
             } else {
-                return await db.InsertAsync(item);
+                int newid = await db.InsertAsync(item);
             }
+            return item.id;
         }
     }
 }

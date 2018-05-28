@@ -37,6 +37,11 @@ namespace TaskPlanApp.ViewModels
             RaisePropertyChanged("Items");
         }
 
+        public void AddNewItem(TaskViewModel vm)
+        {
+            _items.Add(vm);
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void RaisePropertyChanged(string propName)
