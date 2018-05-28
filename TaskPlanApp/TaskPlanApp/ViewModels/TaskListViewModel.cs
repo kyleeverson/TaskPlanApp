@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using TaskPlanApp.Model;
+using TaskPlanApp.Model.Task;
 
 namespace TaskPlanApp.ViewModels
 {
@@ -23,31 +24,16 @@ namespace TaskPlanApp.ViewModels
         public TaskListViewModel()
         {
             _items = new ObservableCollection<TaskViewModel>();
+            Initialize();
+        }
 
-            var _task = new TaskItem {
-                itemName = "Item #1",
-                completed = true,
-                startDate = DateTime.Parse("05/25/2018 8:00AM")
-            };
-            var taskModel = new TaskViewModel(_task);
-            _items.Add(taskModel);
-
-            var _task2 = new TaskItem {
-                itemName = "Item #2",
-                completed = true,
-                startDate = DateTime.Parse("05/25/2018 9:00AM")
-            };
-            var taskModel2 = new TaskViewModel(_task2);
-            _items.Add(taskModel2);
-
-            var _task3 = new TaskItem {
-                itemName = "Item #3",
-                completed = true,
-                startDate = DateTime.Parse("05/25/2018 10:00AM")
-            };
-            var taskModel3 = new TaskViewModel(_task3);
-            _items.Add(taskModel3);
-
+        private async void Initialize()
+        {
+            List<TaskItem> list = await TaskManager.GetAll();
+            foreach(TaskItem item in list) {
+                var taskModel = new TaskViewModel(item);
+                _items.Add(taskModel);
+            }
             RaisePropertyChanged("Items");
         }
 

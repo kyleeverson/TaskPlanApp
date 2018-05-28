@@ -21,6 +21,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Task\TaskDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Task\TaskItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Task\TaskManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Persistence\ISQLiteDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskListViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TaskViewModel.cs" />
