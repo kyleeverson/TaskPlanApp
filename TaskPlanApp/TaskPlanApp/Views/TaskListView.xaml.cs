@@ -23,9 +23,13 @@ namespace TaskPlanApp.Views
 
             InitializeComponent();
 
+            ToolbarItems.Add(new ToolbarItem("Edit", null, async () => {
+                await EditList();
+            }, ToolbarItemOrder.Default, -1));
+
             ToolbarItems.Add(new ToolbarItem("Add", null, async () => {
                 await AddTask();
-            }, ToolbarItemOrder.Default, -1));
+            }, ToolbarItemOrder.Default, 1));
 
             BindingContext = model;
         }
@@ -52,6 +56,12 @@ namespace TaskPlanApp.Views
             await Navigation.PushAsync(page);
             return 0;
         }
+
+        async Task<int> EditList()
+        {
+            return 0;
+        }
+
 
     }
 }
