@@ -25,7 +25,7 @@ namespace TaskPlanApp.Views
 
             ToolbarItems.Add(new ToolbarItem("Add", null, async () => {
                 await AddTask();
-            }));
+            }, ToolbarItemOrder.Default, -1));
 
             BindingContext = model;
         }
